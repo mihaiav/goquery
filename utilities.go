@@ -65,7 +65,7 @@ func Render(w io.Writer, s *Selection) error {
 		return nil
 	}
 	n := s.Get(0)
-	return html.Render(w, n)
+	return html.Render(w, n, func(*html.Node) {})
 }
 
 // OuterHtml returns the outer HTML rendering of the first item in
